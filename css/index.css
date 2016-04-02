@@ -1,0 +1,170 @@
+@import url(public.css);
+*{
+	font:normal 12px/1.5 Verdana,simsun,Sans-Serif;
+	color: #666;
+}
+
+.doc{
+	background: #fff;
+	min-width:1190px;
+	width: 100%;
+}
+/*head start*/
+
+.head,.foot{
+	width: 100%;
+	min-width: 1190px;
+}
+
+/*headtop*/
+
+.headtop{
+	height: 34px;
+	border-bottom: 1px solid #fff;
+	background:#eee;
+}
+.headtop .top-side{
+	height: 34px;
+	width: 1190px;
+	margin:0 auto;
+}
+.headtop .top_left{
+	float: left;
+	height: 34px;
+	padding-left: 4px;
+	color: #d4d4d4;
+}
+.headtop .top_left li{
+	float: left;
+	position: relative;
+	z-index: 500;
+}
+.headtop .top_left li a{
+	float: left;
+	line-height: 34px;
+	padding-left: 27px;
+	margin:0 6px;
+}
+.headtop .top_left li a s{
+	position: absolute;
+	top: 7px;
+	left:6px;
+	z-index:2;
+	width: 21px;
+	height: 21px;
+	background: url(../image/icon1.png) 0 0 no-repeat;
+}
+.headtop .top_left li a.shouye s{
+	background-position: -225px 0;
+}
+.headtop .top_left li.separator{
+	float: left;
+	width: 0;
+	height: 14px;
+	line-height: 14px;
+	position: relative;
+	top: 10px;
+	left: 0;
+	font-size: 0;
+	overflow: hidden;
+	border-left: 1px solid #ccc;
+	margin:0 4px;
+}
+.headtop .top_left li.fore2{
+	width: 79px;
+	height: 34px;
+	z-index: 502;
+}
+.headtop .top_left li a.weixin{
+	width: 40px;
+	margin: 0;
+	padding:0 6px 0 31px;
+}
+.headtop .top_left li a.weixin s{
+	background-position: -225px -57px;
+}
+.headtop .top_left li a.weixin b{
+	position: absolute;
+	left: 62px;
+	top:16px;
+	width: 9px;
+	height: 5px;
+	overflow: hidden;
+	background: url(../image/icon1.png) -175px -111px no-repeat;
+}
+.headtop .top_left li.fore3{
+	width: 148px;
+	height: 34px;
+	z-index: 501;
+}
+.headtop .top_left li a.phone{
+	width: 72px;
+	margin: 0;
+	padding-left: 28px;
+}
+.headtop .top_left li.fore3 s{
+	height: 20px;
+	background: url(../image/icon2.png) center 0 no-repeat;
+}
+.headtop .top_left li.fore3 b{
+	position: absolute;
+	left: 82px;
+	top:16px;
+	height: 5px;
+	width: 9px;
+	overflow: hidden;
+	background: url(../image/icon1.png) -175px -111px no-repeat;
+}
+.headtop .top_right{
+	float: right;
+	height: 34px;
+}
+.headtop .top_right li.user{
+	line-height: 34px;
+	padding-right: 10px;
+}
+.headtop .top_right li{
+	float: left;
+	height: 34px;
+}
+.headtop .top_right li.user .login{
+	margin-right: 10px;
+}
+.headtop .top_right li.separator{
+	float: left;
+	width: 0;
+	height: 14px;
+	line-height: 14px;
+	position: relative;
+	top: 10px;
+	left: 0;
+	font-size: 0;
+	overflow: hidden;
+	border-left: 1px solid #ccc;
+	margin:0 2px;
+}
+.headtop .top_right li a.link{
+	float: left;
+	height: 26px;
+	padding: 8px 10px 0;
+}
+.headtop .top_right li{
+	position: relative;
+	z-index: 500;
+}
+.headtop .top_right li .a-home{
+	width: 62px;
+}
+.headtop .top_right li.home b{
+	position: absolute;
+	left:62px;
+	top:16px;
+	width: 9px;
+	height: 5px;
+	overflow: hidden;
+	background: url(../image/icon1.png) -175px -111px no-repeat;
+}
+
+/*headmain*/
+
+/*head end*/
