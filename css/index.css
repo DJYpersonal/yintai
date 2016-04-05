@@ -75,6 +75,10 @@
 	height: 34px;
 	z-index: 502;
 }
+.headtop .top_left li .log-wechat{
+	width: 79px;
+	position: relative;
+}
 .headtop .top_left li a.weixin{
 	width: 40px;
 	margin: 0;
@@ -92,6 +96,31 @@
 	overflow: hidden;
 	background: url(../image/icon1.png) -175px -111px no-repeat;
 }
+.headtop .top_left li .wechat{
+	position: absolute;
+	top:34px;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	padding: 8px 12px 10px;
+	background-color: #fff;
+	box-shadow: 0 0 8px #cdcdcd;
+	z-index:-1;
+	display: none;
+}
+.headtop .top_left li .yt-wechat{
+	box-shadow: 0 0 8px #cdcdcd;
+}
+.headtop .top_left li .yt-wechat .weixin{
+	background-color: #fff;
+	color: #e5004f;
+	width: 87px;
+	position: absolute;
+	top:0;
+	left: 0;
+	float: left;
+}
+
 .headtop .top_left li.fore3{
 	width: 148px;
 	height: 34px;
@@ -298,7 +327,18 @@
 	overflow: hidden;
 	background: url(../image/icon1.png) -189px -111px no-repeat;
 }
-
+.headmain .shopC .shop-item{
+	position: absolute;
+	right: 0;
+	top:34px;
+	width: 290px;
+	box-shadow: 0 0 8px #cacaca;
+	background-color:#fff;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	display: none;
+}
 /*headbottom*/
 
 .headbottom{
@@ -350,6 +390,9 @@
 .bottom-side .all-out dl dt a{
 	float: left;
 	color: #fff;
+}
+.bottom-side .all-out dl dt:hover  {
+	background:#e5004f;
 }
 .bottom-side .all-out dl dt a.da{
 	margin:0 0 0 18px;
