@@ -1,3 +1,4 @@
+//banner轮播
 var ban=document.getElementsByClassName("banner")[0];
 var imgs=document.getElementsByClassName("tab_pannel",ban);
 var lis=document.getElementsByClassName("span");
@@ -75,15 +76,17 @@ t=setInterval(moveR,2000);
 
       }
 
+//购物车
 var car=document.getElementsByClassName('minishop')[0];
 var item=document.getElementsByClassName('shop-item')[0];
 car.onmouseover=function(){
-    item.style.display="block";
+  item.style.display="block";
 }
 car.onmouseout=function(){
 	item.style.display="none";
 }
 
+//微信
 var weixin=document.getElementsByClassName('log-wechat')[0];
 var wechat=document.getElementsByClassName('wechat')[0];
 weixin.onmouseover=function(){
@@ -94,3 +97,63 @@ weixin.onmouseout=function(){
 	weixin.classList.remove('yt-wechat');
 	wechat.style.display="none";
 }
+
+//列表
+var list=document.getElementsByClassName('all-out')[0];
+var dls=document.getElementsByTagName('dl');
+var dds=document.getElementsByTagName('dd');
+for(var i=0;i<dls.length;i++){
+	dls[i].index=i;
+	dls[i].onmouseover=function(){
+		for(var j=0;j<dls.length;j++){
+			dds[j].style.display="none";
+		}
+		dds[this.index].style.display="block";
+	}
+ dls[i].onmouseout=function(){
+  for(var j=0;j<dls.length;j++){
+   dds[j].style.display="none";
+ }
+}
+}
+
+//边框
+
+var border=function(obj,width,height){
+	var border=document.getElementsByClassName('border_animation');
+  for(var j=0;j<obj.length;j++){
+   (function(){
+     var top=document.getElementsByClassName('border_top');
+     var right=document.getElementsByClassName('border_right');
+     var bottom=document.getElementsByClassName('border_bottom');
+     var left=document.getElementsByClassName('border_left');
+     var img=document.getElementsByClassName('img_wrap');
+     for(var i=0;i<img.length;i++){
+      img[i].index=i;
+      img[i].onmouseover=function(){
+        for(var i=0;i<img.length;i++){
+         top[this.index].style['width']=width+'px';
+         bottom[this.index].style['width']=width+'px';
+         left[this.index].style['height']=height+'px';
+         right[this.index].style['height']=height+'px';
+       }
+     }
+     img[i].onmouseout=function(){
+      for(var i=0;i<img.length;i++){
+       top[this.index].style['width']=0;
+       bottom[this.index].style['width']=0;
+       left[this.index].style['height']=0;
+       right[this.index].style['height']=0;
+     }
+   }
+ }
+})()
+}
+
+}
+
+var product=document.getElementsByClassName('product');
+border('product','272','182');
+
+/*var con-list=document.getElementsByTagName('con-list');
+border('con')*/

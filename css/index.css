@@ -45,6 +45,9 @@
 	padding-left: 27px;
 	margin:0 6px;
 }
+.headtop .top_left a:hover{
+	color: #e5004f;
+}
 .headtop .top_left li a s{
 	position: absolute;
 	top: 7px;
@@ -56,6 +59,9 @@
 }
 .headtop .top_left li a.shouye s{
 	background-position: -225px 0;
+}
+.headtop .top_left li a.shouye:hover s{
+	background-position: -225px -27px;
 }
 .headtop .top_left li.separator{
 	float: left;
@@ -87,6 +93,9 @@
 .headtop .top_left li a.weixin s{
 	background-position: -225px -57px;
 }
+.headtop .top_left li .yt-wechat .weixin s{
+	background-position: -225px -88px;
+}
 .headtop .top_left li a.weixin b{
 	position: absolute;
 	left: 62px;
@@ -95,6 +104,9 @@
 	height: 5px;
 	overflow: hidden;
 	background: url(../image/icon1.png) -175px -111px no-repeat;
+}
+.headtop .top_left li .yt-wechat .weixin b{
+	background-position: -175px -128px;
 }
 .headtop .top_left li .wechat{
 	position: absolute;
@@ -135,6 +147,9 @@
 	height: 20px;
 	background: url(../image/icon2.png) center 0 no-repeat;
 }
+.headtop .top_left li.fore3:hover s{
+	background-position: center -20px;
+}
 .headtop .top_left li.fore3 b{
 	position: absolute;
 	left: 82px;
@@ -143,6 +158,9 @@
 	width: 9px;
 	overflow: hidden;
 	background: url(../image/icon1.png) -175px -111px no-repeat;
+}
+.headtop .top_left li.fore3:hover b{
+    background-position: -175px -128px;
 }
 .headtop .top_right{
 	float: right;
@@ -155,6 +173,9 @@
 .headtop .top_right li{
 	float: left;
 	height: 34px;
+}
+.headtop .top_right a:hover{
+	color: #e5004f;
 }
 .headtop .top_right li.user .login{
 	margin-right: 10px;
@@ -193,7 +214,9 @@
 	overflow: hidden;
 	background: url(../image/icon1.png) -175px -111px no-repeat;
 }
-
+.headtop .top_right li.home:hover b{
+    background-position: -175px -128px;
+}
 /*headmain*/
 
 .headmain{
@@ -394,6 +417,9 @@
 .bottom-side .all-out dl dt:hover  {
 	background:#e5004f;
 }
+.bottom-side .all-out dl dt:hover span{
+	display: none;
+}
 .bottom-side .all-out dl dt a.da{
 	margin:0 0 0 18px;
 	height: 20px;
@@ -412,6 +438,10 @@
 .bottom-side .all-out .dl-1 dt a i{
 	background-position: 0 -108px;
 }
+.bottom-side .all-out .dl-1 dt:hover i{
+	background-position: 0 -126px;
+}
+
 .bottom-side .all-out dl dt i{
 	float: left;
 	width: 0;
@@ -439,29 +469,64 @@
 .bottom-side .all-out .dl-2 dt a i{
 	background-position: -17px -111px;
 }
+.bottom-side .all-out .dl-2 dt:hover i{
+	background-position: -17px -129px;
+}
 .bottom-side .all-out .dl-3 dt a i{
 	background-position: -34px -110px;
+}
+.bottom-side .all-out .dl-3 dt:hover i{
+	background-position: -34px -128px;
 }
 .bottom-side .all-out .dl-4 dt a i{
 	background-position: -51px -111px;
 }
+.bottom-side .all-out .dl-4 dt:hover i{
+	background-position: -51px -129px;
+}
 .bottom-side .all-out .dl-5 dt a i{
 	background-position: -68px -111px;
+}
+.bottom-side .all-out .dl-5 dt:hover i{
+	background-position: -68px -129px;
 }
 .bottom-side .all-out .dl-6 dt a i{
 	background-position: -85px -110px;
 }
+.bottom-side .all-out .dl-6 dt:hover i{
+	background-position: -85px -128px;
+}
 .bottom-side .all-out .dl-7 dt a i{
 	background-position: -102px -110px;
+}
+.bottom-side .all-out .dl-7 dt:hover i{
+	background-position: -102px -128px;
 }
 .bottom-side .all-out .dl-8 dt a i{
 	background-position: -119px -111px;
 }
+.bottom-side .all-out .dl-8 dt:hover i{
+	background-position: -119px -129px;
+}
 .bottom-side .all-out .dl-9 dt a i{
 	background-position: -136px -111px;
 }
+.bottom-side .all-out .dl-9 dt:hover i{
+	background-position: -136px -129px;
+}
 .bottom-side .all-out .dl-10 dt a i{
 	background-position: -153px -111px;
+}
+.bottom-side .all-out .dl-10 dt:hover i{
+	background-position: -153px -129px;
+}
+.bottom-side .all-out dl dd{
+	background: #fff;
+	width: 300px;
+	height: 450px;
+	position: absolute;
+	top:0;
+	left:210px;
 }
 .bottom-side .daohang{
 	float: left;
@@ -694,7 +759,7 @@
     width: 940px;
     height: 262px;
 }
-.hd-content .con-list .border_animation{
+.hd-content .con-list .border_animation .img_wrap{
 	border:1px solid #eee;
 	width: 220px;
 	height: 260px;
@@ -1036,7 +1101,7 @@
 }
 .border_animation .border_right{
 	position: absolute;
-	height: 1px;
+	width: 1px;
 	font-size: 0;
 	background: #666;
 	bottom:0;
@@ -1054,7 +1119,7 @@
 }
 .border_animation .border_left{
 	position: absolute;
-	height: 1px;
+	width: 1px;
 	font-size: 0;
 	background: #666;
 	top:0;
