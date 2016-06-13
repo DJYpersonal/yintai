@@ -87,13 +87,14 @@ car.onmouseout=function(){
 }
 
 //微信
+var fore2=document.getElementsByClassName('fore2')[0];
 var weixin=document.getElementsByClassName('log-wechat')[0];
 var wechat=document.getElementsByClassName('wechat')[0];
-weixin.onmouseover=function(){
+fore2.onmouseover=function(){
 	weixin.classList.add('yt-wechat');
 	wechat.style.display="block";
 }
-weixin.onmouseout=function(){
+fore2.onmouseout=function(){
 	weixin.classList.remove('yt-wechat');
 	wechat.style.display="none";
 }

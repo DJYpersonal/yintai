@@ -1,56 +1,39 @@
+//åŠ¨ç”»ç®—æ³•
 /*
-  º¯Êı colorAnimate (obj,attr,val,dur,fn,callback)
-  obj   Òª´¦ÀíµÄ¶ÔÏó
-  attr  Òª´¦ÀíµÄÊôĞÔ  background   color
-  val   ×îÖÕÑÕÉ« rbg    #
-  fn    ¶¯»­µÄ·½Ê½
-  callback  ±ä»¯Íê³ÉÖ®ºóÒª´¦ÀíµÄÄÚÈİ
-*/
-/*
-   ¶¯»­º¯Êı animate (obj,attrObj,dur,fun,callback)
-   obj   Òª¶¯»­µÄ¶ÔÏó
-   attrobj   Òª¶¯»­µÄÊôĞÔ¶ÔÏó{width:xxxx,height:xxx,left:xxxx,top:xxxx,opacity:xxx}
-   dur   ³ÖĞøÊ±¼ä
-   fun   ¶¯»­·½Ê½
-   callback ±ä»¯Íê³ÉÖ®ºóÒª´¦ÀíµÄÄÚÈİ
-*/
-
-//¶¯»­Ëã·¨
-/*
-		 Linear£ºÎŞ»º¶¯Ğ§¹û(ÔÈËÙÔË¶¯)£»
-			Quad£º¶ş´Î·½µÄ»º¶¯£»
-			Cubic£ºÈı´Î·½µÄ»º¶¯
-			Quartic£ºËÄ´Î·½µÄ»º¶¯£»
-			Quintic£ºÎå´Î·½µÄ»º¶¯£»
-			Sinusoidal£ºÕıÏÒÇúÏßµÄ»º¶¯£»
-			Exponential£ºÖ¸ÊıÇúÏßµÄ»º¶¯£»
-			Circular£ºÔ²ĞÎÇúÏßµÄ»º¶¯£»
-			Elastic£ºÖ¸ÊıË¥¼õµÄÕıÏÒÇúÏß»º¶¯£»
-			Back£º³¬¹ı·¶Î§µÄÈı´Î·½»º¶¯£©£»
-			Bounce£ºÖ¸ÊıË¥¼õµÄ·´µ¯»º¶¯¡£
-			
-
-			Ã¿¸öĞ§¹û¶¼·ÖÈı¸ö»º¶¯·½Ê½£¨·½·¨£©£¬·Ö±ğÊÇ£º
-			easeIn£º´Ó0¿ªÊ¼¼ÓËÙµÄÔË¶¯£»
-			easeOut£º¼õËÙµ½0µÄÔË¶¯£»
-			easeInOut£ºÇ°°ë¶Î´Ó0¿ªÊ¼¼ÓËÙ£¬ºó°ë¶Î¼õËÙµ½0µÄÔË¶¯¡£
-			
+ Linearï¼šæ— ç¼“åŠ¨æ•ˆæœ(åŒ€é€Ÿè¿åŠ¨)ï¼›
+ Quadï¼šäºŒæ¬¡æ–¹çš„ç¼“åŠ¨ï¼›
+ Cubicï¼šä¸‰æ¬¡æ–¹çš„ç¼“åŠ¨
+ Quarticï¼šå››æ¬¡æ–¹çš„ç¼“åŠ¨ï¼›
+ Quinticï¼šäº”æ¬¡æ–¹çš„ç¼“åŠ¨ï¼›
+ Sinusoidalï¼šæ­£å¼¦æ›²çº¿çš„ç¼“åŠ¨ï¼›
+ Exponentialï¼šæŒ‡æ•°æ›²çº¿çš„ç¼“åŠ¨ï¼›
+ Circularï¼šåœ†å½¢æ›²çº¿çš„ç¼“åŠ¨ï¼›
+ Elasticï¼šæŒ‡æ•°è¡°å‡çš„æ­£å¼¦æ›²çº¿ç¼“åŠ¨ï¼›
+ Backï¼šè¶…è¿‡èŒƒå›´çš„ä¸‰æ¬¡æ–¹ç¼“åŠ¨ï¼‰ï¼›
+ Bounceï¼šæŒ‡æ•°è¡°å‡çš„åå¼¹ç¼“åŠ¨ã€‚
 
 
-			º¯ÊıµÄËÄ¸ö²ÎÊı·Ö±ğ´ú±í£º
-				t--- current time£¨µ±Ç°Ê±¼ä£©£»0 +=60   
-				b--- beginning value£¨³õÊ¼Öµ£©£»100  
-				c--- change in value£¨±ä»¯Á¿£©£»500-100
-				d---duration£¨³ÖĞøÊ±¼ä£©  5000
-			Tween.Quad.easeInt()
-	     	ÔËËãµÄ½á¹û¾ÍÊÇµ±Ç°µÄÔË¶¯Â·³Ì¡£
-		   ÕûÀí·­Òë:Code±¦±¦
-		   ·­Òë»ò½âÊÍ²»¶ÔµÄµØ·½Ï£Íû¸÷Î»ĞŞÕı¡¢ÅúÆÀ¡£
-		   50
-    Tween.Linear     
-	Tween.Quad.easeIn
-*/
- Tween = {  
+ æ¯ä¸ªæ•ˆæœéƒ½åˆ†ä¸‰ä¸ªç¼“åŠ¨æ–¹å¼ï¼ˆæ–¹æ³•ï¼‰ï¼Œåˆ†åˆ«æ˜¯ï¼š
+ easeInï¼šä»0å¼€å§‹åŠ é€Ÿçš„è¿åŠ¨ï¼›
+ easeOutï¼šå‡é€Ÿåˆ°0çš„è¿åŠ¨ï¼›
+ easeInOutï¼šå‰åŠæ®µä»0å¼€å§‹åŠ é€Ÿï¼ŒååŠæ®µå‡é€Ÿåˆ°0çš„è¿åŠ¨ã€‚
+
+
+
+ å‡½æ•°çš„å››ä¸ªå‚æ•°åˆ†åˆ«ä»£è¡¨ï¼š
+ t--- current timeï¼ˆå½“å‰æ—¶é—´ï¼‰ï¼›0 +=60
+ b--- beginning valueï¼ˆåˆå§‹å€¼ï¼‰ï¼›100
+ c--- change in valueï¼ˆå˜åŒ–é‡ï¼‰ï¼›500-100
+ d---durationï¼ˆæŒç»­æ—¶é—´ï¼‰  5000
+ Tween.Quad.easeInt()
+ è¿ç®—çš„ç»“æœå°±æ˜¯å½“å‰çš„è¿åŠ¨è·¯ç¨‹ã€‚
+ æ•´ç†ç¿»è¯‘:Codeå®å®
+ ç¿»è¯‘æˆ–è§£é‡Šä¸å¯¹çš„åœ°æ–¹å¸Œæœ›å„ä½ä¿®æ­£ã€æ‰¹è¯„ã€‚
+ 50
+ Tween.Linear
+ Tween.Quad.easeIn
+ */
+Tween = {
     Linear: function(t,b,c,d){ return c*t/d+b; },
     Quad: {
         easeIn: function(t,b,c,d){
@@ -168,7 +151,7 @@
             return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
         },
         easeInOut: function(t,b,c,d,s){
-            if (s == undefined) s = 1.70158; 
+            if (s == undefined) s = 1.70158;
             if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
             return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
         }
@@ -193,229 +176,233 @@
             else return Tween.Bounce.easeOut(t*2-d, 0, c, d) * .5 + c*.5 + b;
         }
     }
- }
- /*
-   ¶¯»­º¯Êı animate (obj,attrObj,dur,fun,callback)
-   obj   Òª¶¯»­µÄ¶ÔÏó
-   attrobj   Òª¶¯»­µÄÊôĞÔ¶ÔÏó{width:xxxx,height:xxx,left:xxxx,top:xxxx,opacity:xxx}
-   dur   ³ÖĞøÊ±¼ä
-   fun   ¶¯»­·½Ê½
-   callback »Øµ÷º¯Êı 
-   */
-  
-   function animate (obj,attrObj,dur,fun,callback) {
-	 clearInterval(obj.t);
-	if(arguments.length==2){
-	  dur=500;
-	  fun=Tween.Linear;
-	  callback=null;
-	}
-	if(arguments.length==3){
-	  if(typeof dur=="number"){
-	  dur=dur;
-	  fun=Tween.Linear;
-	  callback=null;
-	  }
-	  if(typeof dur=="function"){
-	    if(dur.length>=4){ 
-			  fun=dur;
-			  callback=null;
-			  dur=500;
-		}else{  
-			  fun=Tween.Linear;
-			  callback=dur;
-			  dur=500;
-		}
-	  
-	  }
-	}
-	if(arguments.length==4){
-	   if(typeof dur=="number"){
-	     dur=dur;
-		 if(fun.length>=4){
-			  fun=fun;
-			  callback=null;
-			  
-		}else{
-	     	  callback=fun;
-			  fun=Tween.Linear;
-		   
-		}
-		 
-	   }else{	  
-				  callback=fun;
-				  fun=dur;
-				  dur=500
-				 
-			
-	  }
-	}
+}
+/*
+ obj   è¦åŠ¨ç”»çš„å¯¹è±¡
+ attrobj   è¦åŠ¨ç”»çš„å±æ€§å¯¹è±¡{width:xxxx,height:xxx,left:xxxx,top:xxxx,opacity:xxx}
+ dur   æŒç»­æ—¶é—´
+ fun   åŠ¨ç”»æ–¹å¼
+ callback
+ */
+
+function animate (obj,attrObj,dur,fun,callback) {
+    clearInterval(obj.t);
+    if(arguments.length==2){
+        dur=500;
+        fun=Tween.Linear;
+        callback=null;
+    }
+    if(arguments.length==3){
+        if(typeof dur=="number"){
+            dur=dur;
+            fun=Tween.Linear;
+            callback=null;
+        }
+        if(typeof dur=="function"){
+            if(dur.length>=4){
+                fun=dur;
+                callback=null;
+                dur=500;
+            }else{
+                fun=Tween.Linear;
+                callback=dur;
+                dur=500;
+            }
+
+        }
+    }
+    if(arguments.length==4){
+        if(typeof dur=="number"){
+            dur=dur;
+            if(fun.length>=4){
+                fun=fun;
+                callback=null;
+
+            }else{
+                callback=fun;
+                fun=Tween.Linear;
+
+            }
+
+        }else{
+            callback=fun;
+            fun=dur;
+            dur=500
+
+
+        }
+    }
     var time=0;
-	var start={};var change={};
+    var start={};var change={};
     for (var i in attrObj) {
-	 start[i]=setCss(obj,i);
-	 change[i]=attrObj[i]-start[i];
+        start[i]=setCss(obj,i);
+        change[i]=attrObj[i]-start[i];
     }
 
-	obj.t=setInterval(function(){
-	  if(time>=dur){
-	   clearInterval(obj.t);
-	   for (var i in attrObj) {
-		 setCss(obj,i,attrObj[i]);
-	   }
-	   if(callback){
-	     callback.call(obj);
-	   }
-	  }else{
-	  for (var i in attrObj) {
-	   setCss(obj,i,fun(time,start[i],change[i],dur));
-	  }
-	  time+=60
-	  }
-	},60)
-  }
+    obj.t=setInterval(function(){
+        if(time>=dur){
+            clearInterval(obj.t);
+            for (var i in attrObj) {
+                setCss(obj,i,attrObj[i]);
+            }
+            if(callback){
+                callback.call(obj);
+            }
+        }else{
+            for (var i in attrObj) {
+                setCss(obj,i,fun(time,start[i],change[i],dur));
+            }
+            time+=60
+        }
+    },60)
+}
 
 
 
 
- function setCss (obj,attr,val) {
-   if(obj.nodeType!==1){
-     return;
-   }
+function setCss (obj,attr,val) {
+    if(obj.nodeType!==1){
+        return;
+    }
 
-   //³õÊ¼»¯²ÎÊı
-  var attr=attr.replace(/^\s*|\s*$/g,"");
-     //»ñÈ¡Öµ
-   if(arguments.length==2){
-       //Î»ÖÃºÍ³ß´ç
-      if(attr=="height"||attr=="width"||attr=="top"||attr=="left"||attr=="right"|| attr=="bottom"){
-	var val=obj.currentStyle?parseInt(obj.currentStyle[attr]):parseInt(getComputedStyle(obj,null)[attr]);
-		if(!val){
-		 var str="offset"+attr.replace(attr.charAt(0),attr.charAt(0).toUpperCase());
+    //åˆå§‹åŒ–å‚æ•°
+    var attr=attr.replace(/^\s*|\s*$/g,"");
+    //è·å–å€¼
+    if(arguments.length==2){
+        //ä½ç½®å’Œå°ºå¯¸
+        if(attr=="height"||attr=="width"||attr=="top"||attr=="left"||attr=="right"|| attr=="bottom"){
+            var val=obj.currentStyle?parseInt(obj.currentStyle[attr]):parseInt(getComputedStyle(obj,null)[attr]);
+            if(!val){
+                var str="offset"+attr.replace(attr.charAt(0),attr.charAt(0).toUpperCase());
 
-		 val=obj[str];
-		}
-		return val;
-	  }
-
-	  
-	   if(attr=="padding"||attr=="margin"||attr=="paddingTop"||attr=="paddingLeft"||attr=="paddingRight"||attr=="paddingBottom"||attr=="marginTop"||attr=="marginLeft"||attr=="marginRight"||attr=="marginBottom"){
-	    var cc= parseInt(obj.currentStyle? ((obj.currentStyle[attr]==undefined||obj.currentStyle[attr]=="auto")?0:obj.currentStyle[attr]):(getComputedStyle(obj,null)[attr]==undefined?0:getComputedStyle(obj,null)[attr]));
-
-	     return cc;
-	   }
-        //Í¸Ã÷¶È
-	  if(attr=="opacity"){
-	    return obj.currentStyle?parseFloat(obj.currentStyle[attr]||1):parseFloat(getComputedStyle(obj,null)[attr]||1);
-	  }
-	  //ÑÕÉ«
-	  if(attr=='color'||attr=="background"|| attr=="backgroundColor"||attr=='borderBottomColor'||attr== 'borderLeftColor'||    attr=='borderRightColor'||attr=='borderTopColor'){
-		   var colors=obj.currentStyle?(obj.currentStyle[attr]||"#000000"):(getComputedStyle(obj,null)[attr]||"#000000");
-		   //»ñÈ¡¶ÔÏó
-		
-		   return getColor(colors);
-         
-		}
-		if(attr=="scrollTop"){
-		   return obj.scrollTop;
-		}
-
-	  return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,null)[attr];
+                val=obj[str];
+            }
+            return val;
+        }
 
 
-   }else if(arguments.length==3){
-     switch (attr) {
-     case "width":
-	 case "height":
-	 case "top":
-	 case "left":
-	 case "bottom":
-	 case "right":
-	 case "padding":
-	 case "margin":
-	 case "paddingLeft":
-	 case "paddingRight":
-	 obj.style[attr]=val+"px";
-	 break;
-     case "opacity":
-	 obj.style[attr]=val;
-	 obj.style.filter="alpha(opacity="+val*100+")"
-	 break;
-	 case "scrollTop":
-	 obj.scrollTop=val;
-	 break;
-	 case 'color':
-		case "background":
-		case "backgroundColor":
-		case 'borderBottomColor':
-		case 'borderLeftColor':
-		case 'borderRightColor':
-		case 'borderTopColor':
-		obj.style[attr]=val;
-	 break;
-	 default:
-	 obj.style[attr]=val;
-     }
+        if(attr=="padding"||attr=="margin"||attr=="paddingTop"||attr=="paddingLeft"||attr=="paddingRight"||attr=="paddingBottom"||attr=="marginTop"||attr=="marginLeft"||attr=="marginRight"||attr=="marginBottom"){
+            var cc= parseInt(obj.currentStyle? ((obj.currentStyle[attr]==undefined||obj.currentStyle[attr]=="auto")?0:obj.currentStyle[attr]):(getComputedStyle(obj,null)[attr]==undefined?0:getComputedStyle(obj,null)[attr]));
 
-   }
- }
+            return cc;
+        }
+        //é€æ˜åº¦
+        if(attr=="opacity"){
+            return obj.currentStyle?parseFloat(obj.currentStyle[attr]||1):parseFloat(getComputedStyle(obj,null)[attr]||1);
+        }
+        //é¢œè‰²
+        if(attr=='color'||attr=="background"|| attr=="backgroundColor"||attr=='borderBottomColor'||attr== 'borderLeftColor'||    attr=='borderRightColor'||attr=='borderTopColor'){
+            var colors=obj.currentStyle?(obj.currentStyle[attr]||"#000000"):(getComputedStyle(obj,null)[attr]||"#000000");
+            //è·å–å¯¹è±¡
+            return getColor(colors);
 
- //ÑÕÉ«½¥±ä¶¯»­
- //»ñµÃÑÕÉ«
+        }
+        if(attr=='scrollTop'||attr=="scrollLeft"){
+            return obj[attr];
+        }
+
+
+        return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,null)[attr];
+
+
+    }else if(arguments.length==3){
+        switch (attr) {
+            case "width":
+            case "height":
+            case "top":
+            case "left":
+            case "bottom":
+            case "right":
+            case "padding":
+            case "margin":
+            case "paddingLeft":
+            case "paddingRight":
+            case "marginTop":
+            case "marginLeft":
+            case "marginRight":
+            case "marginBottom":
+
+                obj.style[attr]=val+"px";
+                break;
+            case "opacity":
+                obj.style[attr]=val;
+                obj.style.filter="alpha(opacity="+val*100+")"
+                break;
+            case 'color':
+            case "background":
+            case "backgroundColor":
+            case 'borderBottomColor':
+            case 'borderLeftColor':
+            case 'borderRightColor':
+            case 'borderTopColor':
+                obj.style[attr]=val;
+                break;
+            case 'scrollTop':
+            case 'scrollLeft':
+                obj[attr]=val;
+                break;
+            default:
+                obj.style[attr]=val;
+        }
+
+    }
+}
+
+//é¢œè‰²æ¸å˜åŠ¨ç”»
+//è·å¾—é¢œè‰²
 function getColor (color) {
-  var str,r,g,b,arr;
-  if(typeof color=="string"){
-    //16 ½øÖÆ
-    if(color.charAt(0)==="#"){
-	  str=color.substring(1)
-	  r=parseInt(str.substr(0,2),16);
-	  g=parseInt(str.substr(2,2),16);
-	  b=parseInt(str.substr(4,2),16);
-	  arr=[r,g,b]
-	  return arr;
-	}else{
-	  str=color.substring(4,color.length-1)
-	  return str.split(",")
-	}
-  }
-  if(color instanceof Array){
-    return color;
-  }
+    var str,r,g,b,arr;
+    if(typeof color=="string"){
+        //16 è¿›åˆ¶
+        if(color.charAt(0)==="#"){
+            str=color.substring(1)
+            r=parseInt(str.substr(0,2),16);
+            g=parseInt(str.substr(2,2),16);
+            b=parseInt(str.substr(4,2),16);
+            arr=[r,g,b]
+            return arr;
+        }else{
+            str=color.substring(4,color.length-1)
+            return str.split(",")
+        }
+    }
+    if(color instanceof Array){
+        return color;
+    }
 }
 
 /*
-  º¯Êı colorAnimate (obj,attr,val,dur,fn,callback)
-  obj   Òª´¦ÀíµÄ¶ÔÏó
-  attr  Òª´¦ÀíµÄÊôĞÔ  background   color
-  val   ×îÖÕÑÕÉ« rbg    #
-  fn    ¶¯»­µÄ·½Ê½
-  callback  ±ä»¯Íê³ÉÖ®ºóÒª´¦ÀíµÄÄÚÈİ
-*/
+ obj   è¦å¤„ç†çš„å¯¹è±¡
+ attr  è¦å¤„ç†çš„å±æ€§  background   color
+ val   æœ€ç»ˆé¢œè‰² rbg    #
+ fn    åŠ¨ç”»çš„æ–¹å¼
+ callback  å˜åŒ–å®Œæˆä¹‹åè¦å¤„ç†çš„å†…å®¹
+ */
 function colorAnimate (obj,attr,val,dur,fn,callback) {
-if(obj.time){
-  clearInterval(obj.time);
-}
- 
-  var fn=fn||Tween.Linear;
-  var start=setCss(obj,attr);
-  var end=getColor(val);
-  var times=0,r,g,b;
- obj.time= setInterval(function  () {
-	 if(times>=dur){
-	   clearInterval(obj.time)
-       obj.time=null;
-		   if(callback){
-	        callback()
-	      }
-		  
-	 }else{
-     r=fn(times,parseInt(start[0]),parseInt(end[0])-parseInt(start[0]),dur)
-     g=fn(times,parseInt(start[1]),parseInt(end[1])-parseInt(start[1]),dur)
-	 b=fn(times,parseInt(start[2]),parseInt(end[2])-parseInt(start[2]),dur)	
-		
-	 setCss(obj,attr,"rgb("+parseInt(r)+","+parseInt(g)+","+parseInt(b)+")")
-      times+=60;
-	   }
-  },60)
+    if(obj.time){
+        clearInterval(obj.time);
+    }
+
+    var fn=fn||Tween.Linear;
+    var start=setCss(obj,attr);
+    var end=getColor(val);
+    var times=0,r,g,b;
+    obj.time= setInterval(function  () {
+        if(times>=dur){
+            clearInterval(obj.time)
+            obj.time=null;
+            if(callback){
+                callback()
+            }
+
+        }else{
+            r=fn(times,parseInt(start[0]),parseInt(end[0])-parseInt(start[0]),dur)
+            g=fn(times,parseInt(start[1]),parseInt(end[1])-parseInt(start[1]),dur)
+            b=fn(times,parseInt(start[2]),parseInt(end[2])-parseInt(start[2]),dur)
+
+            setCss(obj,attr,"rgb("+parseInt(r)+","+parseInt(g)+","+parseInt(b)+")")
+            times+=60;
+        }
+    },60)
 
 }
